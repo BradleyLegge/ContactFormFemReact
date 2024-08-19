@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', 'sans-serif';
+    outline: none;
+}
+
+:root{
+    /* Primary Colors*/
+    --light-green: hsl(148, 38%, 91%);
+    --green: hsl(169, 82%, 27%);
+    --green-hover: hsl(169, 82%, 17%);
+    --red: hsl(0, 66%, 54%);
+
+    --toastify-color-progress-info: var(var(--light-green));
+
+    /* Neutral Colors*/
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(186, 15%, 59%);
+    --gray: hsl(187, 24%, 22%);
+}
+
+body{
+    background-color: var(--light-green);
+}
+
+.form-hero{
+    background-color: var(--white);
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 100px auto;
+    border-radius: 5px;
+}
+
+span{
+    color: var(--green);
+}
+
+label{
+    margin: 20px 0;
+}
+
+input{
+    cursor: pointer;
+    border: 1px solid var(--green);
+    height: 40px;
+    border-radius: 5px;
+}
+
+input:hover, input:focus, textarea:focus{
+    border: 2px solid var(--green);
+}
+
+.inputError, .inputError:focus{
+    border: 2px solid var(--red);
+}
+
+.name-container{
+    display: flex;
+    gap: 20px;
+}
+
+.first-name, .last-name{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.query-type-container{
+    display: flex;
+    gap: 20px;
+}
+
+.radio-button{
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--green);
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    accent-color: var(--green);
+}
+
+.radio-checked{
+    background-color: var(--light-green);
+}
+
+.radio-button label{
+    margin: 0;
+}
+
+textarea{
+    cursor: pointer;
+    border: 1px solid var(--green);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.consent-message{
+    cursor: pointer;
+    margin: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.consent-message label{
+    margin: 0;
+}
+
+.submit-btn{
+    margin-top: 30px;
+    height: 40px;
+    border: none;
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 5px;
+}
+
+.submit-btn:hover{
+    cursor: pointer;
+    background-color: var(--green-hover);
+}
+
+.errorMessage{
+    color: var(--red);
+}
+
+.toast{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.success-message{
+    width: 400px;
+    padding: 10px;
+    color: var(--white);
+    background-color: var(--green-hover);
+    border-radius: 5px;
+}
+
+.success{
+    display: flex; 
+    gap: 20px;
+}
+
+.progress-bar{
+    color: var(--light-green);
+}
+
+@media screen and (max-width: 600px) {
+ 
+    .form-hero{
+        width: 95%;
+    }
+
+    .name-container, .query-type-container{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .query-type-container{
+        display: flex;
+        gap: 20px;
+    }
+
+    .query-type-container label{
+        margin: 0;
+    }
+}
