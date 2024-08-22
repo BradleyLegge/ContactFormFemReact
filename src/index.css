@@ -162,6 +162,7 @@ textarea{
  
     .form-hero{
         width: 95%;
+        margin: 10px;
     }
 
     .name-container, .query-type-container{
